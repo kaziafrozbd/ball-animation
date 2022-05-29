@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes slider {
+            0%{
+                background-color: brown;
+                left: 0;
+                top: 0;
+            }
+            25%{
+                top: 225px;
+                background-color: aqua;
+                transform: scale(0.5);
+            }
+            50%{
+                top: 0;
+                background-color: forestgreen;
+                transform: scale(1);
+            }
+            75%{
+                top: 225px;
+                background-color: purple;
+                transform: scale(0.5);
+            }
+            100%{
+                background-color: blue;
+                left: 600px;
+                top: 0;
+            }
+        }
+        .stage{
+            height: 300px;
+            width: 700px;
+            background-color: burlywood;
+            
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            animation: slider 2.5s ease-in-out 1s infinite alternate;
+            animation-play-state: running;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's explore Ball Jump Animation </h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
